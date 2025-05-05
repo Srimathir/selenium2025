@@ -1,14 +1,33 @@
 package DriverInititation;
-
-
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class chromeDriver {
-    public static void main(String[] args) {
+    public static ChromeDriver driver = new ChromeDriver();
 
-        ChromeDriver driver = new ChromeDriver();
-        driver.get("https://www.google.co.in/");
+    public static WebDriver getDriver()
+    {
+
+              return driver;
+    }
+    public void closeDriver()
+    {
         driver.close();
+    }
+    public void checkBox()
+    {
+        driver.get("https://testautomationpractice.blogspot.com/");
+        
+
+    }
+
+    public static void main(String[] args) {
+        chromeDriver d = new chromeDriver();
+        d.checkBox();
+        d.closeDriver();
 
     }
 }
+
+
+
